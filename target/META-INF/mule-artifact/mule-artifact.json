@@ -1,0 +1,37 @@
+{
+  "configs": [
+    "global.xml",
+    "implementation-flow.xml",
+    "mss-email-uapi.xml"
+  ],
+  "secureProperties": [],
+  "redeploymentEnabled": true,
+  "name": "7e7bcc56-0b06-497d-b323-2938b9919b8b:mss-email-uapi:1.0.0",
+  "minMuleVersion": "4.4.0",
+  "requiredProduct": "MULE_EE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [],
+      "exportedResources": [
+        "application-types.xml",
+        "config/config-dev.yaml",
+        "config/config-local.yaml",
+        "config/config-prod.yaml",
+        "dwl/no-cc-email-attach.dwl",
+        "dwl/no-cc-email.dwl",
+        "dwl/response-false.json.dwl",
+        "dwl/with-cc-email-attach.dwl",
+        "dwl/with-cc-email.dwl",
+        "global.xml",
+        "implementation-flow.xml",
+        "log4j2.xml",
+        "mss-email-uapi.xml"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:email="http://www.mulesoft.org/schema/mule/email"
+	xmlns:apikit="http://www.mulesoft.org/schema/mule/mule-apikit" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/mule-apikit http://www.mulesoft.org/schema/mule/mule-apikit/current/mule-apikit.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/email http://www.mulesoft.org/schema/mule/email/current/mule-email.xsd">
+	<global-property doc:name="Global Property" doc:id="e505d8d6-bb35-4c03-96c9-b0f96bd0f6ab" name="env" value="local" />
+	<configuration-properties doc:name="Configuration properties" doc:id="fbbc07ce-b552-47d1-9811-b1f663f6a31f" file="config/config-${env}.yaml" />
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="4f398965-64cf-4356-ad6f-cbeec7056400" >
+		<http:listener-connection host="${http.host}" port="${http.port}" />
+	</http:listener-config>
+	<http:request-config name="SendGrid_Request_configuration" doc:name="HTTP Request configuration" doc:id="05c6eb21-9e2a-4848-96cc-5f5c53f1383b" >
+		<http:request-connection host="api.sendgrid.com" />
+	</http:request-config>
+	 <apikit:config name="email-uapi-config" api="resource::7e7bcc56-0b06-497d-b323-2938b9919b8b:mss-email-spec:1.0.0:raml:zip:email-uapi.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
+	<email:smtp-config name="Email_SMTP" doc:name="Email SMTP" doc:id="eadff227-961b-41e8-80a5-77995414759d" >
+		<email:smtp-connection host="${email.host}" port="${email.port}" user="${email.user}" password="${email.password}" >
+			<email:properties >
+				<email:property key="mail.smtp.starttls.enable" value="true" />
+			</email:properties>
+		</email:smtp-connection>
+	</email:smtp-config>
+   
+</mule>

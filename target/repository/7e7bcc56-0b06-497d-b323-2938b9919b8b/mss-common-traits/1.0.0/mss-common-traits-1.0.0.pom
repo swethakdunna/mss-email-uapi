@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>7e7bcc56-0b06-497d-b323-2938b9919b8b</groupId>
+  <artifactId>mss-common-traits</artifactId>
+  <version>1.0.0</version>
+  <name>mss-common-traits</name>
+  <properties>
+    <type>raml-fragment</type>
+    <status>published</status>
+    <mainFile>accept-required.raml</mainFile>
+  </properties>
+  <repositories>
+    <repository>
+      <id>anypoint-exchange</id>
+      <url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
+    </repository>
+  </repositories>
+</project>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>7e7bcc56-0b06-497d-b323-2938b9919b8b</groupId>
+  <artifactId>mss-email-spec</artifactId>
+  <version>1.0.0</version>
+  <name>mss-email-spec</name>
+  <properties>
+    <classifier>raml</classifier>
+    <main>email-uapi.raml</main>
+    <status>published</status>
+    <originalFormatVersion>1.0</originalFormatVersion>
+    <apiVersion>v1</apiVersion>
+    <projectId>d0761862-cec5-42e8-b363-83a8de186568</projectId>
+    <branchId>master</branchId>
+    <commitId>8a62adb658a18ed2404d82223d32db236ef9b45e</commitId>
+    <keywords/>
+    <type>rest-api</type>
+    <mainFile>email-uapi.raml</mainFile>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>7e7bcc56-0b06-497d-b323-2938b9919b8b</groupId>
+      <version>1.0.0</version>
+      <type>zip</type>
+      <classifier>raml-fragment</classifier>
+      <artifactId>mss-common-traits</artifactId>
+    </dependency>
+  </dependencies>
+  <repositories>
+    <repository>
+      <id>anypoint-exchange</id>
+      <url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
+    </repository>
+  </repositories>
+</project>
